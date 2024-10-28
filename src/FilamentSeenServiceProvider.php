@@ -16,6 +16,7 @@ class FilamentSeenServiceProvider extends PackageServiceProvider
 		$package
 			->name('seenable')
 			->hasMigration('create_seenables_table')
+			->hasMigrations('create_seenables_table')
 			->hasTranslations();
 	}
 	
@@ -27,11 +28,8 @@ class FilamentSeenServiceProvider extends PackageServiceProvider
 			MarkAllAsRead::make(),
 			MarkAsRead::make(),
 		]);
-	}
-	
-	
-	public function bootingPackage(): void
-	{
-		$this->loadJSONTranslationsFrom(__DIR__ . '/../lang');
+		$this->publishes([
+			__DIR__ . '/Database/migrations' => database_path('migrations'),
+		], 'seenable-migrations');
 	}
 }
