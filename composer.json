@@ -1,0 +1,36 @@
+{
+  "name": "baraa-al-khateeb/seen",
+  "description": "A package to manage the seen status of models, such as contact messages or orders etc..., in Laravel FilamentPHP applications.",
+  "type": "library",
+  "version": "1.0.0",
+  "require": {
+    "php": "^8.0",
+    "laravel/framework": "^8.0|^9.0|^10.0|^11.0",
+    "filament/filament": "^3.0"
+  },
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Baraa Al Khateeb",
+      "email": "baraakhatib2019@gmail.com",
+      "homepage": "https://baraakhateeb.net"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BaraaAlKhateeb\\Seen\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "keywords": [
+    "laravel",
+    "filament",
+    "package",
+    "seen",
+    "messages",
+    "notifications"
+  ],
+  "homepage": "https://github.com/baraakhateeb/seen",
+  "license": "MIT"
+}
